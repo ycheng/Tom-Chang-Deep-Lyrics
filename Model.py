@@ -2,9 +2,9 @@
 import tensorflow as tf
 
 class Model(object):
-    def __init__(self, is_training, config):
+    def __init__(self, is_training, config, num_steps):
         self.batch_size = batch_size = config.batch_size
-        self.num_steps = num_steps = config.num_steps
+        self.num_steps = num_steps
         size = config.hidden_size
         vocab_size = config.vocab_size
         self.lr = config.learning_rate

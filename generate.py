@@ -41,7 +41,7 @@ def main(_):
         initializer = tf.random_uniform_initializer(-config.init_scale,
                                                 config.init_scale)
         with tf.variable_scope("model", reuse=None, initializer=initializer):
-            mtest = Model.Model(is_training=False, config=config)
+            mtest = Model.Model(is_training=False, config=config, num_steps=1)
 
         #tf.global_variables_initializer().run()
 
